@@ -1,0 +1,23 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "go-wails-admin",
+  "outputfilename": "go-wails-admin",
+  "frontend": {
+    "dir": "./frontend",
+    "install": "pnpm install",
+    "build": "pnpm build",
+    "dev": "pnpm dev",
+    "package": "pnpm"
+  },
+  "author": {
+    "name": "admin",
+    "email": "admin@example.com"
+  },
+  "info": {
+    "company": "",
+    "productName": "Go Wails Admin",
+    "legalCopyright": "",
+    "comments": "Go + Wails + MySQL + Vue Pure Admin"
+  },
+  "nsisType": "multiple"
+}

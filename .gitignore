@@ -1,22 +1,81 @@
-node_modules
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
-dist
-dist-ssr
-*.local
-.eslintcache
-report.html
-vite.config.*.timestamp*
+Thumbs.db
 
-yarn.lock
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+
+# Wails
+build/bin/
+build/windows/
+build/linux/
+build/darwin/
+
+# Logs
+*.log
 npm-debug.log*
-.pnpm-error.log*
-.pnpm-debug.log
-tests/**/coverage/
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-tsconfig.tsbuildinfo
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Misc
+.cache/
+.temp/
