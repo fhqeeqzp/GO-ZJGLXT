@@ -93,6 +93,8 @@ onBeforeUnmount(() => {
     @mouseenter.prevent="isShow = true"
     @mouseleave.prevent="isShow = false"
   >
+    <!-- 拖动区域 -->
+    <div class="drag-area"></div>
     <LaySidebarLogo v-if="showLogo" :collapse="isCollapse" />
     <el-scrollbar
       wrap-class="scrollbar-wrapper"
@@ -133,5 +135,15 @@ onBeforeUnmount(() => {
 <style scoped>
 :deep(.el-loading-mask) {
   opacity: 0.45;
+}
+
+.drag-area {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 48px;
+  -webkit-app-region: drag;
 }
 </style>

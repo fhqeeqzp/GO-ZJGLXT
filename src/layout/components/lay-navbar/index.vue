@@ -7,6 +7,7 @@ import { useTranslationLang } from "@/layout/hooks/useTranslationLang";
 import LaySidebarFullScreen from "../lay-sidebar/components/SidebarFullScreen.vue";
 import LaySidebarBreadCrumb from "../lay-sidebar/components/SidebarBreadCrumb.vue";
 import LaySidebarTopCollapse from "../lay-sidebar/components/SidebarTopCollapse.vue";
+import LayWindowControls from "../lay-window-controls/index.vue";
 
 import GlobalizationIcon from "@/assets/svg/globalization.svg?component";
 import AccountSettingsIcon from "~icons/ri/user-settings-line";
@@ -121,6 +122,8 @@ const { t, locale, translationCh, translationEn } = useTranslationLang();
       >
         <IconifyIconOffline :icon="Setting" />
       </span>
+      <!-- 窗口控制按钮 -->
+      <LayWindowControls />
     </div>
   </div>
 </template>
@@ -130,6 +133,8 @@ const { t, locale, translationCh, translationEn } = useTranslationLang();
   width: 100%;
   height: 48px;
   overflow: hidden;
+  -webkit-app-region: drag; // 允许拖动窗口
+  user-select: none;
 
   .hamburger-container {
     float: left;
@@ -145,6 +150,7 @@ const { t, locale, translationCh, translationEn } = useTranslationLang();
     min-width: 280px;
     height: 48px;
     color: #000000d9;
+    -webkit-app-region: no-drag; // 允许点击按钮
 
     .el-dropdown-link {
       display: flex;
@@ -170,6 +176,11 @@ const { t, locale, translationCh, translationEn } = useTranslationLang();
   .breadcrumb-container {
     float: left;
     margin-left: 16px;
+    -webkit-app-region: no-drag; // 允许点击面包屑
+  }
+
+  .hamburger-container {
+    -webkit-app-region: no-drag; // 允许点击菜单折叠按钮
   }
 }
 
